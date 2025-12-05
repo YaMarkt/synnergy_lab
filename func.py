@@ -3,9 +3,9 @@ import os
 import time
 
 
+#что то типо моей библиотеки для быстрого доступа к частым функциям
 
-
-def set_pale_red_background(sheet, row_number, array, max_len):
+def set_pale_red_background(sheet, row_number, array, max_len): #в этом проекте не используется
     """
     Устанавливает бледно-красный фон для ячеек в строке
     
@@ -26,7 +26,7 @@ def set_pale_red_background(sheet, row_number, array, max_len):
     }
     sheet.format(range_str, pale_red)
 
-def color_cell(sheet, row_number, col_letter, color):
+def color_cell(sheet, row_number, col_letter, color): #в этом проекте не используется
     """
     Красит одну ячейку в указанный цвет.
 
@@ -41,7 +41,7 @@ def color_cell(sheet, row_number, col_letter, color):
     })
 
 
-def safe_api_call(func, *args, **kwargs):
+def safe_api_call(func, *args, **kwargs): #для того чтобы не улетало в ошибку гугл доков(лимит и т.д)
     while True:
         try:
             return func(*args, **kwargs)
@@ -52,7 +52,7 @@ def safe_api_call(func, *args, **kwargs):
             else:
                 raise
 
-def list_files(directory):
+def list_files(directory): #в этом проекте не используется
     files_xlsx = []
     for filename in os.listdir(directory):
         file_path = os.path.join(directory, filename)
@@ -60,7 +60,7 @@ def list_files(directory):
             files_xlsx.append(file_path)
     return files_xlsx  
 
-def find_longest_array(array_of_arrays):
+def find_longest_array(array_of_arrays): #в этом проекте не используется
     longest_array = max(array_of_arrays, key=len)
     return longest_array
 

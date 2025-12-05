@@ -45,6 +45,7 @@ class MyBot:
 
     async def help_handler(self, message: Message):
         help_text = """
+        Я бот для запуска скриптов КОТОРЫЕ находятся в папке
         Доступные команды:
         /start - Начало работы
         /help - Справка
@@ -104,8 +105,7 @@ class MyBot:
     async def start(self):
         # Загружаем скрипты из папки (можно заменить на загрузку из БД)
         # Пример: self.scheduler.add_script("example_script", "0 12 * * 1")
-        self.scheduler.add_script("treners2", "0 14 * * 3")
-        self.scheduler.add_script("achivochnaya", "0 14 1 * *")
+        
         self.scheduler.start()
         await self.dp.start_polling(self.bot)
 
